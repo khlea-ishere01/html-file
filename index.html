@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animal Emoji Quiz</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Animal Emoji Quiz</h1>
+  <p>Drop your username and I'll tell you which animal emoji you associate with!</p>
+  <input type="text" id="username" placeholder="Enter your username">
+  <button onclick="getEmoji()">Get Emoji</button>
+  <div id="result"></div>
+</div>
+
+<script>
+function getEmoji() {
+  var username = document.getElementById("username").value;
+  var result = document.getElementById("result");
+
+  if (username === "") {
+    result.innerHTML = "Please enter your username.";
+    return;
+  }
+
+  // Logic to determine the emoji based on the username (you'll need to implement this)
+  var emoji = ""; // Replace with your emoji logic
+
+  result.innerHTML = "You associate with: " + emoji;
+}
+</script>
+</body>
+</html>
